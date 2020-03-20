@@ -3,11 +3,15 @@
 	template.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Color Properties</legend>
+				<legend>Mau setting apa ?</legend>
 				<table>
 					<tr>
-						<td>Color</td>
+						<td>Mau warna apa ?</td>
 						<td><input id="bps_color" type="text" size="10" maxlength="10"></td>
+					</tr>
+					<tr>
+						<td>Mau value berapa ?</td>
+						<td><input id="bps_value" type="text" size="10" maxlength="10"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
@@ -35,6 +39,7 @@
 					detail: {
 						properties: {
 							color: this.color
+							value: this.value
 						}
 					}
 			}));
@@ -46,6 +51,14 @@
 
 		get color() {
 			return this._shadowRoot.getElementById("bps_color").value;
+		}
+
+		set value(newValue) {
+			this._shadowRoot.getElementById("bps_value").value = newColor;
+		}
+
+		get value() {
+			return this._shadowRoot.getElementById("bps_value").value;
 		}
 	}
 
