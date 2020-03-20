@@ -9,10 +9,6 @@
 						<td>Mau warna apa ?</td>
 						<td><input id="bps_color" type="text" size="10" maxlength="10"></td>
 					</tr>
-					<tr>
-						<td>Mau value berapa ?</td>
-						<td><input id="bps_value" type="text" size="10" maxlength="10"></td>
-					</tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
@@ -39,7 +35,6 @@
 					detail: {
 						properties: {
 							color: this.color
-							value: this.value
 						}
 					}
 			}));
@@ -51,14 +46,6 @@
 
 		get color() {
 			return this._shadowRoot.getElementById("bps_color").value;
-		}
-
-		set value(newValue) {
-			this._shadowRoot.getElementById("bps_value").value = newColor;
-		}
-
-		get value() {
-			return this._shadowRoot.getElementById("bps_value").value;
 		}
 	}
 
