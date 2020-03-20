@@ -1,6 +1,6 @@
 (function()  {
 	let template = document.createElement("template");
-	template.innerHTML = '<form id="form"><fieldset><legend>Color Properties</legend><table><tr><td>Color</td><td><input id="sps_color" type="text" size="40" maxlength="40"></td></tr></table><input type="submit" style="display:none;"></fieldset></form>';
+	template.innerHTML = '<form id="form"><fieldset><legend>Properties</legend><table><tr><td>Mau warna apa?</td><td><input id="sps_color" type="text" size="40" maxlength="40"></td></tr></table><input type="submit" style="display:none;"></fieldset></form>';
 
 	class BoxSps extends HTMLElement {
 		constructor() {
